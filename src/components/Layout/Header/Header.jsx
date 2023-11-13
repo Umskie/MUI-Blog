@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import {
   AppBar,
@@ -14,6 +16,9 @@ import {
   Menu as MenuIcon,
   Twitter,
 } from "@mui/icons-material/";
+
+// import { Link, NavLink } from "react-router-dom";
+
 
 const Header = () => {
   const StyledToolbar = styled(Toolbar)({
@@ -34,11 +39,28 @@ const Header = () => {
   });
   const MenuItems = [
     { Name: "Home", Link: "/" },
-    { Name: "Products", Link: "#" },
-    { Name: "Portfolio", Link: "#" },
+    { Name: "Podcast", Link: "#" },
+    { Name: "Portfolio", Link: "/Pages/Portfolio" },
     { Name: "Blog", Link: "#" },
     { Name: "Contact us", Link: "#" },
+    { Name: "About", Link: "/Pages/About" },
+    { Name: "Sign Up", Link: "/Pages/Register" },
+    { Name: "Sign In", Link: "/Pages/Login" },
+
   ];
+
+//  const MenuItems = ()=>{
+//   return( <div>
+//   <Link to="/">Home</Link>
+//   <Link to="/Pages/Products">Products</Link>
+//   <Link to="/Pages/Portfolio">Portfolio</Link>
+//   <Link to="/Pages/Blog">Blog</Link>
+//   <Link to="/Pages/Contacts">Contact</Link>
+//   <Link to="/Pages/About">About</Link>
+//   </div>)
+//  };
+
+
   const [open, SetOpen] = useState(false);
   return (
     <AppBar sx={{ background: "black" }} position={"static"}>
